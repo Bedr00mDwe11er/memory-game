@@ -1,16 +1,16 @@
-#Memory Game Project
+# Memory Game Project
 
-##Table of Contents
+## Table of Contents
 
-*[Dependencies](#dependencies)
-*[Instructions](#instructions)
+* [Dependencies](#dependencies)
+* [Instructions](#instructions)
 
-##Dependencies
+## Dependencies
 
 To play this game make sure all files in this repository are on your local machine and that you are using an up-to-date browser preferably Chrome or Firefox.
 
 
-##Instructions
+## Instructions
 
 Get started playing by opening index.html in your
 browser.
