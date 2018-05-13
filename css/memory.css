@@ -1,3 +1,109 @@
-li{
+body
+html {
+    /**/
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    background: #fff url(../images/swirl_pattern.png); /* Background pattern from Subtle Patterns */
+}
+
+header {
+    width: 100%;
+    text-align: center;
+}
+
+
+h1 {
+    font: 3em'Gaegu', cursive;
+}
+
+li {
     list-style: none;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    flex-flow: column wrap;
+}
+
+.content {
+    /**/
+    display: flex;
+    flex-direction: column;
+}
+
+/*style for the score section*/
+
+/*look up how to display ul horizontaly*/
+
+.scorce {
+    /**/
+    display: inline-flex;
+    align-items: left;
+    margin: 0;
+}
+
+.star-rating {
+    /**/
+    display: inline-flex;
+    align-items: left;
+    margin: 0;
+}
+
+.star {
+    /**/
+    display: inline-flex;
+    align-items: left;
+    margin: 0;
+}
+
+.moves-counter {
+    /**/
+    display: inline;
+    align-items: left;
+    font: 1.5em'Gaegu', cursive;
+}
+
+.moves-number {
+    /**/
+}
+
+.restart-button {
+    cursor: pointer;
+    display: inline-flex;
+    float: right;
+}
+
+/*style for the deck of cards*/
+
+.game-board {
+    /**/
+}
+
+.deck {
+    /**/
+    display: flex;
+    flex-flow: column wrap;
+    background: radial-gradient(#f23 0%, #f99 100%);
+    width: 700px;
+    height: 700px;
+    border-radius: 2%;
+}
+
+.card {
+    /**/
+    cursor: pointer;
+    background:white;
+    border-radius: 7%;
+    margin: 5%;
+    display: flex;
+    flex:100px;
+    box-shadow: 0px 0px 10px 0 rgba(0, 0, 0, 1);
+    justify-content: center;
+    align-items: center;
 }
