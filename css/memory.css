@@ -109,3 +109,37 @@ li {
     justify-content: center;
     align-items: center;
 }
+
+/*animations*/
+
+/*animations for non matching cards*/
+.do_not_match_animation {
+    animation-duration: 3s;
+    animation-name: not_match;
+}
+
+.flip_down_animation {
+    animation-duration:3s;
+    animation-name: flip_face_down;
+}
+
+@keyframes not_match {
+    from {
+        background: radial-gradient(#fff,#f00);
+    }
+
+    to {
+        background: white;
+    }
+
+}
+/*flip the cards back to face down positson*/
+@keyframes flip_face_down {
+    from {
+        color: black;
+    }
+
+    to {
+        color: white;
+    }
+}
