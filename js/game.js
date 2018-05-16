@@ -1,6 +1,6 @@
     /*
-    Work on the winning condition
-    How does your game “know” if a player has won?
+    TODO: Move counter
+    Game displays the current number of moves a user has made.
     */
 
     /*Checking if the DOM is Ready*/
@@ -23,6 +23,15 @@
     cards[i].style.color = 'white';
 
     }
+
+    //move counter
+    let move_counter = 0;
+
+    //will show the numbers of moves
+    let move_number = document.querySelector('.moves-number');
+
+    //will change the moves words depending on circumstances
+    let move_word = document.querySelector('.moves-word');
 
     //variables for handling moves
     /*number of face up cards in the current move*/
@@ -213,6 +222,8 @@
                             cards[i].firstElementChild.style.color = 'black';
                         }
 
+
+
                     }
 
                     /*A move has been complete
@@ -220,8 +231,25 @@
                     */
                     num_faceUp = 0;
 
-                    /*apart of the win condition*/
+                    /*add one to the move counter*/
+                    move_counter++;
+                    console.log(`moves ${move_counter}`);
 
+                    /*Display the moves*/
+                    move_number.textContent = move_counter;
+
+                    //for words moves or move depending
+                    if(move_counter ==1) {
+                        move_word.textContent = 'move';
+                    }
+
+                    if(move_counter > 1) {
+                        move_word.textContent = 'moves';
+                    }
+
+
+
+                    /*apart of the win condition*/
                     //counting the correct number of matches
                     found_match++;
 
@@ -268,12 +296,30 @@
                         setTimeout(delayed_reset_no_match, 1000);
 
                     }
+
                 }
 
                 /*A move has been complete
                 set the num_faceUp to zero to reset the proccess
                 */
                 num_faceUp = 0;
+
+                /*add one to the move counter*/
+                move_counter++;
+                console.log(`moves ${move_counter}`);
+
+                /*Display the moves*/
+                move_number.textContent = move_counter;
+
+                //for words moves or move depending
+                if(move_counter ==1) {
+                    move_word.textContent = 'move';
+                }
+
+                if(move_counter > 1) {
+                    move_word.textContent = 'moves';
+                }
+
 
             }
 
