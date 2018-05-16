@@ -24,6 +24,7 @@
 
     }
 
+    //variables for handling moves
     /*number of face up cards in the current move*/
     let num_faceUp = 0;
 
@@ -32,6 +33,13 @@
 
     /*second card of a move*/
     let second_card = "";
+
+    /*variables for keeping track of the player wining*/
+    //boolean that turns true once you win the game.
+    let you_win = false;
+
+    //number that counts the correct number of mathces
+    let found_match = 0;
 
     /*this block of code is lisenting for clicks on the cards*/
     let deck = document.querySelector('.deck');
@@ -166,12 +174,11 @@
 
                 /*controls what happens when cards match in a move*/
                 function match() {
-                    console.log(`the cards match`);
                     /*the cards match so keep them face up,
                     set the matching cards backgroung color to
                     green.
                     */
-
+                    console.log(`the cards match`);
                     //TODO: add an animation for getting a correct match
 
                     /*scan through the cards*/
@@ -204,7 +211,6 @@
 
                             //keep the icon visible
                             cards[i].firstElementChild.style.color = 'black';
-
                         }
 
                     }
@@ -213,6 +219,28 @@
                     set the num_faceUp to zero to reset the proccess
                     */
                     num_faceUp = 0;
+
+                    /*apart of the win condition*/
+
+                    //counting the correct number of matches
+                    found_match++;
+
+                    //tells me how many matches have been found
+                    console.log(` the player has found ${found_match} matches`);
+
+                    /*if the player has found 8 matches,
+                     then set the bool you_win to true and
+                     */
+                    if(found_match == 8) {
+                        you_win = true;
+                    }
+
+                    //start a you win process
+                    if(you_win == true) {
+                        console.log(`you win`);
+                        //call game_won function
+                        setTimeout(game_won, 1000);
+                    }
             }
 
             /*controls what happens when cards do not match in a move*/
@@ -278,4 +306,16 @@
 
                     }
                 }
+            }
+
+            function game_won() {
+                console.log(`game_won function was called`);
+                alert('you win');
+
+                //TODO:Create a Congratulations Popup
+
+                /*When a user wins the game, a modal appears to congratulate the player and
+                 ask if they want to play again.
+                It should also tell the user how much time it took to win the game,
+                and what the star rating was.*/
             }
