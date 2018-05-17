@@ -1,9 +1,12 @@
     /*
-    TODO: Timer
-    When the player starts a game,
-     a displayed timer should also start.
-    Once the player wins the game,
-     the timer stops
+     TODO: Star Rating
+     The game displays a star rating (from 1 to at least 3)
+     that reflects the player's performance. At the beginning of a game,
+     it should display at least 3 stars. After some number of moves,
+     it should change to a lower star rating. After a few more moves,
+     it should change to a even lower star rating (down to 1).
+
+The number of moves needed to change the rating is up to you, but it should happen at some point.
     */
 
     /*Checking if the DOM is Ready*/
@@ -13,19 +16,19 @@
 
     });
 
-    /*This block of code start the game with all of the "cards" facedown*/
-    /*Selecting all of the cards and storing them into an array*/
-    let cards = document.getElementsByClassName('card');
+    /*star rating*/
+    //star elements
+    //select the right most star icon
+    let right_star = document.querySelector('.star-right');
 
-    //scaning through the cards
-    for( i = 0; i < cards.length; i++) {
-    /*style for the facedown side of card,
-    Something to play with later is diffrent colors
-    for the facedown side of the card
-     */
-    cards[i].style.color = 'white';
+    //select the mid star
+    let mid_star = document.querySelector('.star-mid');
 
-    }
+    //select the left most star icon
+    let left_star = document.querySelector('.star-left');
+
+    /*count the number of wrong moves*/
+    let number_wrong = 0;
 
     /*time variables*/
     //seconds
@@ -50,8 +53,6 @@
 
     //timer
     let timerId = window.setInterval(timer,1000);
-
-    //
 
     //move counter
     let move_counter = 0;
@@ -78,6 +79,20 @@
 
     //number that counts the correct number of mathces
     let found_match = 0;
+
+    /*This block of code start the game with all of the "cards" facedown*/
+    /*Selecting all of the cards and storing them into an array*/
+    let cards = document.getElementsByClassName('card');
+
+    //scaning through the cards
+    for( i = 0; i < cards.length; i++) {
+    /*style for the facedown side of card,
+    Something to play with later is diffrent colors
+    for the facedown side of the card
+     */
+    cards[i].style.color = 'white';
+
+    }
 
     /*this block of code is lisenting for clicks on the cards*/
     let deck = document.querySelector('.deck');
@@ -307,6 +322,61 @@
             /*controls what happens when cards do not match in a move*/
             function do_not_match() {
                 console.log(`the cards do not match`);
+
+                //add one to the wrong move counter variable number wrong
+                number_wrong++;
+
+                console.log(`the number of wrong moves made is ${number_wrong}`);
+
+                /*star rating*/
+                /*If the player has made 9 wrong lose half a star*/
+                if(number_wrong == 9) {
+                    console.log('lose a half star');
+
+                    //change the icon for the right most star icon to a half star
+                    right_star.textContent = 'star_half';
+                }
+
+                //If the player makes five more wrong moves lose another half a star
+                if(number_wrong == 14) {
+                    console.log("lose another half a star");
+
+                    //change the icon for the right most star to an empty star
+                    right_star.textContent = 'star_border';
+                }
+
+                //If the player makes 4 more wrong moves lose another half a star
+                if(number_wrong == 18) {
+                    console.log('lose another half a star');
+
+                    //change the icon for the mid star to a half star
+                    mid_star.textContent = 'star_half';
+                }
+
+                //If the player makes 3 more wrong moves lose another half a star
+                if(number_wrong == 21) {
+                    console.log('lose another half a star');
+
+                    //change the icon for the mid star to an empty star
+                    mid_star.textContent = 'star_border';
+                }
+
+                //If the player makes 2 more wrong moves lose another half star
+                if(number_wrong == 23) {
+                    console.log('lose another half star');
+
+                    //change the icon for the left most star to a half star
+                    left_star.textContent = 'star_half';
+                }
+
+                //If the player makes one more wrong move lose another half star
+                if(number_wrong == 24) {
+                    console.log('lose another half star');
+
+                    //change the icon to the left  most star to a empty star
+                    left_star.textContent = 'star_border';
+                }
+
                 /*the cards do not match,
                 set the cards color to red,
                 then use a delay to keep the cards face up for a little bit
