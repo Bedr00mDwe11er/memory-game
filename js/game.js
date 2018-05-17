@@ -1,6 +1,9 @@
     /*
-    TODO: Move counter
-    Game displays the current number of moves a user has made.
+    TODO: Timer
+    When the player starts a game,
+     a displayed timer should also start.
+    Once the player wins the game,
+     the timer stops
     */
 
     /*Checking if the DOM is Ready*/
@@ -23,6 +26,32 @@
     cards[i].style.color = 'white';
 
     }
+
+    /*time variables*/
+    //seconds
+    let seconds = 0;
+
+    //minutes
+    let minutes = 0;
+
+    //Hours
+    let hours = 0;
+
+    //time elements
+
+    //element that will display seconds
+    let seconds_element = document.querySelector('.seconds');
+
+    //element that will display minutes
+    let minutes_element = document.querySelector('.minutes');
+
+    //element that will display hours
+    let hours_element = document.querySelector('.hours');
+
+    //timer
+    let timerId = window.setInterval(timer,1000);
+
+    //
 
     //move counter
     let move_counter = 0;
@@ -266,6 +295,10 @@
                     //start a you win process
                     if(you_win == true) {
                         console.log(`you win`);
+
+                        //stop the timer
+                        window.clearInterval(timerId);
+
                         //call game_won function
                         setTimeout(game_won, 1000);
                     }
@@ -364,4 +397,47 @@
                  ask if they want to play again.
                 It should also tell the user how much time it took to win the game,
                 and what the star rating was.*/
+            }
+
+            //timer function
+            function timer() {
+                /*Math for time variables*/
+                seconds++;
+
+                //display seconds passed
+                seconds_element.textContent = seconds;
+
+                /*if 60 seconds has passed add one to minutes  display minutes,
+                set seconds to zero*/
+                if(seconds == 60) {
+                    //set seconds to zero
+                    seconds = 0;
+
+                    //display seconds passed
+                    seconds_element.textContent = seconds;
+
+                    //add one to minutes
+                    minutes++;
+
+                    //display minutes
+                    minutes_element.textContent = minutes;
+
+                    /*if 60 minutes has passed add one to hours display hours,
+                    set minutes to zero*/
+                    if(minutes == 60) {
+                        //set minutes to zero
+                        minutes = 0;
+
+                        //display minutes passed
+                        minutes_element.textContent = minutes;
+
+                        //add one to hours
+                        hours++;
+
+                        //display hours
+                        hours_element.textContent = hours
+                    }
+
+                }
+
             }
