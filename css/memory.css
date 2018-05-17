@@ -110,16 +110,21 @@ li {
     align-items: center;
 }
 
+/*classes add to cards and icons with js*/
+.faceUp{
+    color:black;
+}
+
 /*animations*/
 
 /*animations for non matching cards*/
 .do_not_match_animation {
-    animation-duration: 3s;
+    animation-duration: 2s;
     animation-name: not_match;
 }
 
 .flip_down_animation {
-    animation-duration:3s;
+    animation-duration:2s;
     animation-name: flip_face_down;
 }
 

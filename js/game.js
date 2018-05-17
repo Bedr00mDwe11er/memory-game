@@ -1,13 +1,10 @@
     /*
-     TODO: Star Rating
-     The game displays a star rating (from 1 to at least 3)
-     that reflects the player's performance. At the beginning of a game,
-     it should display at least 3 stars. After some number of moves,
-     it should change to a lower star rating. After a few more moves,
-     it should change to a even lower star rating (down to 1).
-
-The number of moves needed to change the rating is up to you, but it should happen at some point.
+    TODO:Restart Button
+    A restart button allows the player to reset the game board,
+    the timer,
+    and the star rating.
     */
+
 
     /*Checking if the DOM is Ready*/
     document.addEventListener('DOMContentLoaded', function () {
@@ -80,6 +77,7 @@ The number of moves needed to change the rating is up to you, but it should happ
     //number that counts the correct number of mathces
     let found_match = 0;
 
+
     /*This block of code start the game with all of the "cards" facedown*/
     /*Selecting all of the cards and storing them into an array*/
     let cards = document.getElementsByClassName('card');
@@ -92,6 +90,9 @@ The number of moves needed to change the rating is up to you, but it should happ
      */
     cards[i].style.color = 'white';
 
+    //randomly shuffle the cards at the start of a game
+    cards[i].style.order = `${Math.floor(Math.random() * 16)}`;
+
     }
 
     /*this block of code is lisenting for clicks on the cards*/
@@ -101,8 +102,23 @@ The number of moves needed to change the rating is up to you, but it should happ
             //testing if it works as expected
             console.log("List item ", e.target.className.replace("post-", ""), " was clicked!");
 
-            /*this "flips" the card up after it's been clicked*/
-            e.target.style.color = "black";
+            //if the card was clicked
+            if(e.target.className == 'card') {
+                /*this "flips" the card up after it's been clicked*/
+                e.target.style.color = "black";
+
+                //for the icon
+                e.target.firstElementChild.style.color = 'black';
+            }
+
+            //if the icon was clicked
+            if(e.target.className == 'material-icons') {
+                //flips the card
+                e.target.style.color = 'black';
+            }
+
+
+
 
             /*After a card has been flipped add a class of ".faceUp" to it.
             but check to see if the card is already fliped by checking if it contains
@@ -511,3 +527,142 @@ The number of moves needed to change the rating is up to you, but it should happ
                 }
 
             }
+
+            //select the reset icon
+            let reset_button = document.querySelector('.restart-button');
+
+            reset_button.addEventListener('click', function  () {
+                console.log('reset button was clicked');
+
+
+
+
+                    for(i = 0; i < cards.length; i++) {
+                        //
+                        if(cards[i].className == 'card faceUp do_not_match_animation') {
+                            setTimeout(board_reset, 2000);
+                        }
+
+                        //
+                        if(cards[i].className == 'card faceUp' || cards[i].className == 'card matched') {
+                            board_reset();
+                        }
+                    }
+
+                //    board_reset();
+
+
+    })
+
+            //function that resets the game board and flips the cards face down
+            function board_reset () {
+
+            you_win = false;
+            //scaning through the cards
+            for( i = 0; i < cards.length; i++) {
+
+            /*style for the facedown side of card,
+            Something to play with later is diffrent colors
+            for the facedown side of the card
+                */
+
+            cards[i].style.color = 'white';
+
+            //randomly shuffle the cards at the start of a game
+            cards[i].style.order = `${Math.floor(Math.random() * 16)}`;
+
+            //undo the move
+
+            //for unmatcheds cards
+            if(cards[i].className == 'card faceUp') {
+                /*reomve the faceUp class from the icon*/
+                cards[i].firstElementChild.classList.remove("faceUp");
+
+                cards[i].firstElementChild.style.color = 'white';
+
+                /*remove the faceUp class from the card*/
+                cards[i].classList.remove("faceUp");
+
+                //only subtract from the num face up if it's zero or greater
+                //to prevent negative.
+                if(num_faceUp >= 0) {
+                /*minus one to the counter for the number of face cards in the current move*/
+                num_faceUp--;
+                }
+
+                }
+
+                //for matched cards
+                if(cards[i].className == 'card matched')
+                {
+                /*reomve the matched class from the icon*/
+                cards[i].firstElementChild.classList.remove("matched");
+
+                //flip the card back over
+                cards[i].firstElementChild.style.color = 'white';
+
+                /*remove the faceUp class from the card*/
+                cards[i].classList.remove("matched");
+
+                //flip the card back over
+                cards[i].style.background = 'white';
+
+                //set the number of matches found to zero
+                found_match = 0;
+
+                }
+
+                /*restart the move counter*/
+                //set move counter to zero
+                move_counter = 0;
+
+                //display zero for the move counter
+                move_number.textContent = move_counter;
+
+                /*reset the star rating*/
+
+                //reset the number of wrong moves
+                number_wrong = 0;
+
+                //reset the number of matches found
+                found_match = 0;
+
+                //reset the stars
+                right_star.textContent = 'star';
+
+                mid_star.textContent = 'star';
+
+                left_star.textContent = 'star';
+
+
+                /*reset the timer*/
+
+                //stop the timer
+                window.clearInterval(timerId);
+
+                //reset the seconds
+                seconds = 0;
+
+                //show zero seconds
+                seconds_element.textContent = seconds;
+
+
+                //reset the minutes
+                minutes = 0;
+
+                //show zero minutes
+                minutes_element.textContent = minutes;
+
+                //reset the hours
+                hours = 0;
+
+                //show zero hours
+                hours_element.textContent = hours;
+
+                //restart the timer
+                timerId = window.setInterval(timer,1000);
+
+
+        }
+
+    }
