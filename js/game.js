@@ -1,8 +1,10 @@
     /*
-    TODO:Restart Button
-    A restart button allows the player to reset the game board,
-    the timer,
-    and the star rating.
+    TODO:Congratulations Popup
+    When a user wins the game,
+    a modal appears to congratulate the player and
+    ask if they want to play again.
+    It should also tell the user how much time it took to win the game,
+    and what the star rating was.
     */
 
 
@@ -543,10 +545,10 @@
                             setTimeout(board_reset, 2000);
                         }
 
-                        //
-                        if(cards[i].className == 'card faceUp' || cards[i].className == 'card matched') {
+                        else {
                             board_reset();
                         }
+
                     }
 
                 //    board_reset();
@@ -633,7 +635,6 @@
                 mid_star.textContent = 'star';
 
                 left_star.textContent = 'star';
-
 
                 /*reset the timer*/
 
