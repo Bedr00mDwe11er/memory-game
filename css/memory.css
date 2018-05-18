@@ -115,6 +115,11 @@ li {
     color:black;
 }
 
+/*for the timer*/
+.timer {
+    font: 1.5em'Gaegu', cursive;
+}
+
 /*animations*/
 
 /*animations for non matching cards*/
@@ -147,4 +152,61 @@ li {
     to {
         color: white;
     }
+}
+
+/*congragulations pop up*/
+.congraulations-modal {
+    /*hide it by default*/
+    display: none;
+
+    position: fixed;
+
+    /*sits on top*/
+    z-index: 1;
+
+    left: 0;
+
+    top: 0;
+
+    width: 100%;
+
+    height: 100%;
+
+    background: white;
+}
+
+.modal-content {
+    text-align: center;
+
+}
+
+.congragulations-heading {
+    /*css to this later*/
+}
+
+.play-again-button {
+    /*make it look like a button*/
+    border: 2px solid grey;
+    border-radius: 12px;
+    background: #7f7;
+    font: 2em'Gaegu', cursive;
+    padding: 12px;
+    align-content: center;
+    cursor: pointer;
+}
+/*player stats*/
+
+.play-time {
+    font: 1.2em'Gaegu', cursive;
+    margin: 48px 0px 0px 0px;
+}
+
+.moves-counter-used {
+    font: 1.2em'Gaegu', cursive;
+
+}
+
+.star-rating-end {
+    margin: 24px 40px 0px 0px;
+
 }

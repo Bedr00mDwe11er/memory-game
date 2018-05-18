@@ -477,14 +477,139 @@
 
             function game_won() {
                 console.log(`game_won function was called`);
-                alert('you win');
-
                 //TODO:Create a Congratulations Popup
 
                 /*When a user wins the game, a modal appears to congratulate the player and
                  ask if they want to play again.
                 It should also tell the user how much time it took to win the game,
                 and what the star rating was.*/
+
+                //select the congragulations modal
+                let congragulations_popUp = document.querySelector('.congraulations-modal');
+
+                //select the play again button
+                let play_again_button = document.querySelector('.play-again-button');
+
+                //add an event listener to the "button"
+                play_again_button.addEventListener('click', function() {
+                    //have the modal close by not displaying it any
+                    congragulations_popUp.style.display = 'none'
+                    //reset the game
+                    board_reset();
+                })
+
+                //show play time
+                //selecet the hours spent playing
+                let hours_spent = document.querySelector('.hours-spent');
+
+                //change it's text content to show the hours spent playing
+                hours_spent.textContent = hours;
+
+                //select the minutes spent playing
+                let minutes_spent = document.querySelector('.minutes-spent');
+
+                //change it's text content to show the minutes spent playing
+                minutes_spent.textContent = minutes;
+
+                //select  seconds spent playing
+                let seconds_spent = document.querySelector('.seconds-spent');
+
+                //change it's text content to display the seconds spent playing
+                seconds_spent.textContent = seconds;
+
+                //show number of moves it took
+                //select the moves it took
+                let moves_used = document.querySelector('.moves-counter-used');
+
+                //select the moves used number
+                let moves_number_used = document.querySelector('.moves-number-used');
+
+                /*Display the number of moves used*/
+                moves_number_used.textContent = move_counter;
+
+                //show the star rating
+                //select the end stars
+                 //select the right most star icon
+                 let right_star_end = document.querySelector('.star-right-end');
+
+                 //select the mid star
+                let mid_star_end = document.querySelector('.star-mid-end');
+
+                //select the left most star icon
+                let left_star_end = document.querySelector('.star-left-end');
+
+                /*star rating*/
+                /*If the player has made 9 wrong lose half a star*/
+                if(number_wrong >= 9 && number_wrong < 14) {
+                    console.log('lose a half star');
+
+                    //change the icon for the right most star icon to a half star
+                    right_star_end.textContent = 'star_half';
+                }
+
+                //If the player makes five more wrong moves lose another half a star
+                if(number_wrong >= 14 && number_wrong < 18) {
+                    console.log("lose another half a star");
+                    //change the icon for the right most star to an empty star
+                    right_star_end.textContent = 'star_border';
+                }
+
+                //If the player makes 4 more wrong moves lose another half a star
+                if(number_wrong >= 18 && number_wrong < 21) {
+                    console.log('lose another half a star');
+
+                    //change the icon for the right most star to an empty star
+                    right_star_end.textContent = 'star_border';
+
+                    //change the icon for the mid star to a half star
+                    mid_star_end.textContent = 'star_half';
+                }
+
+                //If the player makes 3 more wrong moves lose another half a star
+                if(number_wrong >= 21 && number_wrong < 23) {
+                    console.log('lose another half a star');
+
+                    //change the icon for the right most star to an empty star
+                    right_star_end.textContent = 'star_border';
+
+                    //change the icon for the mid star to an empty star
+                    mid_star_end.textContent = 'star_border';
+                }
+
+                //If the player makes 2 more wrong moves lose another half star
+                if(number_wrong >= 23 && number_wrong < 24) {
+                    console.log('lose another half star');
+
+                    //change the icon for the right most star to an empty star
+                    right_star_end.textContent = 'star_border';
+
+                    //change the icon for the mid star to an empty star
+                    mid_star_end.textContent = 'star_border';
+
+                    //change the icon for the left most star to a half star
+                    left_star_end.textContent = 'star_half';
+                }
+
+                //If the player makes one more wrong move lose another half star
+                if(number_wrong >= 24) {
+                    console.log('lose another half star');
+
+                    //change the icon for the right most star to an empty star
+                    right_star_end.textContent = 'star_border';
+
+                    //change the icon for the mid star to an empty star
+                    mid_star_end.textContent = 'star_border';
+
+                    //change the icon to the left  most star to a empty star
+                    left_star_end.textContent = 'star_border';
+                }
+
+
+
+
+                //change the display so it shows up on the page when the user has won
+                congragulations_popUp.style.display = 'block';
+
             }
 
             //timer function
