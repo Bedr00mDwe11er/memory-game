@@ -1,15 +1,16 @@
-body
-html {
-    /**/
+html,
+body {
     margin: 0;
     padding: 0;
     width: 100%;
     height: 100%;
 }
 
+
 body {
-    background: #fff url(../images/swirl_pattern.png); /* Background pattern from Subtle Patterns */
+    background: url(../images/swirl_pattern.png); /* Background pattern from Subtle Patterns */
 }
+
 
 header {
     width: 100%;
@@ -18,12 +19,14 @@ header {
 
 
 h1 {
-    font: 2.5em'Gaegu', cursive;
+    font: 2.5em"Gaegu", cursive;
 }
+
 
 li {
     list-style: none;
 }
+
 
 .container {
     display: flex;
@@ -33,8 +36,8 @@ li {
     margin: -40px 0 0 0;
 }
 
+
 .content {
-    /**/
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -42,53 +45,52 @@ li {
     margin: -20px 0 0 0;
 }
 
-/*style for the score section*/
 
+/*style for the score section*/
 .scorce {
-    /**/
-    align-items: left;
+    align-items: center;
 }
+
 
 .star-rating {
-    /**/
     display: inline;
-    margin: 0px 10px 0px -36px;
+    margin: 0 10px 0 -36px;
 
 }
+
 
 .star {
-    /**/
     display: inline;
 }
+
 
 .moves-counter {
-    /**/
     display: inline;
-    font: 1.7em'Gaegu', cursive;
-    margin: 0px 21px 0px 10px;
+    font: 1.7em"Gaegu", cursive;
+    margin: 0 21px 0 10px;
 }
 
+
 .moves-number {
-    /**/
     display: inline;
 }
+
 
 .restart-button {
     cursor: pointer;
     display: inline;
 }
 
-/*style for the deck of cards*/
 
+/*style for the deck of cards*/
 .game-board {
-    /**/
     display: flex;
     align-items: center;
     align-self: center;
 }
 
+
 .deck {
-    /**/
     display: flex;
     flex-flow: column wrap;
     background: radial-gradient(#f23 0%, #f99 100%);
@@ -100,64 +102,73 @@ li {
 
 }
 
+
 .card {
-    /**/
     cursor: pointer;
-    background:white;
+    background: white;
     border-radius: 7%;
     margin: 2%;
     display: flex;
-    flex:50px;
-    box-shadow: 0px 0px 10px 0 rgba(0, 0, 0, 1);
+    flex: 50px;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 1);
     justify-content: center;
     align-items: center;
 }
 
+
 /*classes add to cards and icons with js*/
 .faceUp{
-    color:black;
+    color: black;
 }
+
 
 /*for the timer*/
 .timer {
     display: block;
     align-content: center;
-    font: 1.4em'Gaegu', cursive;
+    font: 1.4em"Gaegu", cursive;
 }
 
-/*animations*/
 
+/*animations*/
 /*animations for non matching cards*/
 .do_not_match_animation {
     animation-duration: 2s;
     animation-name: not_match;
 }
 
+
 .flip_down_animation {
-    animation-duration:2s;
+    animation-duration: 2s;
     animation-name: flip_face_down;
 }
+
 
 @keyframes not_match {
     from {
         background: radial-gradient(#fff,#f00);
     }
 
+
     to {
         background: white;
     }
 
 }
+
+
 /*flip the cards back to face down positson*/
 @keyframes flip_face_down {
     from {
         color: black;
     }
 
+
     to {
         color: white;
     }
 }
+
 
 /*congragulations pop up*/
 .congraulations-modal {
@@ -180,64 +191,39 @@ li {
     background: white;
 }
 
+
 .modal-content {
     text-align: center;
 
 }
 
-.congragulations-heading {
-    /*css to this later*/
-}
 
 .play-again-button {
     /*make it look like a button*/
     border: 2px solid grey;
     border-radius: 12px;
     background: #7f7;
-    font: 2em'Gaegu', cursive;
+    font: 2em"Gaegu", cursive;
     padding: 12px;
     align-content: center;
     cursor: pointer;
 }
-/*player stats*/
 
+
+/*player stats*/
 .play-time {
-    font: 1.2em'Gaegu', cursive;
-    margin: 48px 0px 0px 0px;
+    font: 1.2em"Gaegu", cursive;
+    margin: 48px 0 0 0;
 }
+
 
 .moves-counter-used {
-    font: 1.2em'Gaegu', cursive;
+    font: 1.2em"Gaegu", cursive;
 
 }
+
 
 .star-rating-end {
-    margin: 24px 40px 0px 0px;
+    margin: 24px 40px 0 0;
 
-}
-
-/*icons*/
-
-/* fallback */
-@font-face {
-  font-family: 'Material Icons';
-  font-style: normal;
-  font-weight: 400;
-  src: url(https://fonts.gstatic.com/s/materialicons/v37/flUhRq6tzZclQEJ-Vdg-IuiaDsNc.woff2) format('woff2');
-}
-
-.material-icons {
-  font-family: 'Material Icons';
-  font-weight: normal;
-  font-style: normal;
-  font-size: 24px;
-  line-height: 1;
-  letter-spacing: normal;
-  text-transform: none;
-  display: inline-block;
-  white-space: nowrap;
-  word-wrap: normal;
-  direction: ltr;
-  -webkit-font-feature-settings: 'liga';
-  -webkit-font-smoothing: antialiased;
 }

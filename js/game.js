@@ -12,6 +12,13 @@
     document.addEventListener('DOMContentLoaded', function () {
     console.log('the DOM is ready');
     /*add code that needs to be run as soon as possible here.*/
+    /*append this,
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    to the head of the page
+    only if...
+    use modernizr
+    so that when using edge it uses that style sheet else don't use it
+    */
 
     });
 
@@ -100,7 +107,7 @@
     /*this block of code is lisenting for clicks on the cards*/
     let deck = document.querySelector('.deck');
     deck.addEventListener('click', function(e) {
-        if(e.target && e.target.nodeName == 'LI' || e.target.className == 'material-icons' ) {
+        if(e.target && e.target.nodeName == 'LI' || e.target.className == 'material-icons md-36 md-48 md-60 md-72' ) {
             //testing if it works as expected
             console.log("List item ", e.target.className.replace("post-", ""), " was clicked!");
 
@@ -114,7 +121,7 @@
             }
 
             //if the icon was clicked
-            if(e.target.className == 'material-icons') {
+            if(e.target.className == 'material-icons md-36 md-48 md-60 md-72') {
                 //flips the card
                 e.target.style.color = 'black';
             }
@@ -138,7 +145,7 @@
                 /*add the class both to the icon and the card*/
 
                 /*if the icon was clicked*/
-                if(e.target.className == 'material-icons') {
+                if(e.target.className == 'material-icons md-36 md-48 md-60 md-72') {
                     /*add class to current target*/
                     e.target.classList.add("faceUp");
 
@@ -178,7 +185,7 @@
             */
             if(num_faceUp == 1) {
                 /*if the icon was clicked*/
-                if(e.target.className == 'material-icons faceUp') {
+                if(e.target.className == 'material-icons md-36 md-48 md-60 md-72 faceUp') {
                     first_card = e.target.innerText;
                     console.log(`the first card is a ${first_card}`);
                 }
@@ -197,7 +204,7 @@
             */
             if(num_faceUp == 2) {
                 /*if the icon was clicked*/
-                if(e.target.className == 'material-icons faceUp') {
+                if(e.target.className == 'material-icons md-36 md-48 md-60 md-72 faceUp') {
                     second_card = e.target.innerText;
                     console.log(`the second card is a ${second_card}`);
 

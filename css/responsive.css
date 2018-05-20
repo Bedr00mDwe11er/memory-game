@@ -2,10 +2,9 @@
 @media screen and (min-width: 375px) and (max-width: 420px) {
     /*Deck size and cards*/
     .deck {
-        /**/
         display: flex;
         flex-flow: column wrap;
-        background: radial-gradient(#f23 0%, #f99 100%);
+        background: radial-gradient(#f23 0, #f99 100%);
         width: 300px;
         height: 300px;
         border-radius: 2%;
@@ -22,7 +21,7 @@
         margin: 2%;
         display: flex;
         flex:60px;
-        box-shadow: 0px 0px 10px 0 rgba(0, 0, 0, 1);
+        box-shadow: 0 0 10px 0 rgba(0, 0, 0, 1);
         justify-content: center;
         align-items: center;
     }
@@ -32,35 +31,15 @@
     }
 
     /*icons*/
-
-    /* fallback */
-    @font-face {
-        font-family: 'Material Icons';
-        font-style: normal;
-        font-weight: 400;
-        src: url(https://fonts.gstatic.com/s/materialicons/v37/flUhRq6tzZclQEJ-Vdg-IuiaDsNc.woff2) format('woff2');
+    .material-icons.md-36 {
+        font-size: 36px;
     }
 
-    .material-icons {
-        font-family: 'Material Icons';
-        font-weight: normal;
-        font-style: normal;
-        font-size: 36px;
-        line-height: 1;
-        letter-spacing: normal;
-        text-transform: none;
-        display: inline-block;
-        white-space: nowrap;
-        word-wrap: normal;
-        direction: ltr;
-        -webkit-font-feature-settings: 'liga';
-        -webkit-font-smoothing: antialiased;
-}
 
     .star-rating {
         /**/
         display: inline;
-        margin: 0px 10px 0px -30px;
+        margin: 0 10px 0 -30px;
     }
 
     .star {
@@ -72,7 +51,7 @@
         /**/
         display: inline;
         font: 2em'Gaegu', cursive;
-        margin: 0px 24px 0px 10px;
+        margin: 0 24px 0 10px;
     }
 
     .moves-number {
@@ -131,7 +110,7 @@
 
     .play-time {
         font: 1.5em'Gaegu', cursive;
-        margin: 48px 0px 0px 0px;
+        margin: 48px 0 0 0;
     }
 
     .moves-counter-used {
@@ -140,7 +119,7 @@
     }
 
     .star-rating-end {
-        margin: 24px 40px 0px 0px;
+        margin: 24px 40px 0 0;
         font-size: 64px;
 
     }
@@ -155,7 +134,7 @@
         /**/
         display: flex;
         flex-flow: column wrap;
-        background: radial-gradient(#f23 0%, #f99 100%);
+        background: radial-gradient(#f23 0, #f99 100%);
         width: 350px;
         height: 350px;
         border-radius: 2%;
@@ -172,7 +151,7 @@
         margin: 2%;
         display: flex;
         flex:69px;
-        box-shadow: 0px 0px 10px 0 rgba(0, 0, 0, 1);
+        box-shadow: 0 0 10px 0 rgba(0, 0, 0, 1);
         justify-content: center;
         align-items: center;
     }
@@ -181,33 +160,17 @@
         font: 1.6em'Gaegu', cursive;
     }
 
-    /* fallback */
-    @font-face {
-        font-family: 'Material Icons';
-        font-style: normal;
-        font-weight: 400;
-        src: url(https://fonts.gstatic.com/s/materialicons/v37/flUhRq6tzZclQEJ-Vdg-IuiaDsNc.woff2) format('woff2');
+
+    /*Icons*/
+    .material-icons.md-36 {
+        font-size: 36px;
     }
 
-    .material-icons {
-        font-family: 'Material Icons';
-        font-weight: normal;
-        font-style: normal;
-        font-size: 36px;
-        line-height: 1;
-        letter-spacing: normal;
-        text-transform: none;
-        display: inline-block;
-        white-space: nowrap;
-        word-wrap: normal;
-        direction: ltr;
-        -webkit-font-feature-settings: 'liga';
-        -webkit-font-smoothing: antialiased;
-}
+
     .star-rating {
         /**/
         display: inline;
-        margin: 0px 10px 0px -40px;
+        margin: 0 10px 0 -40px;
     }
 
     .star {
@@ -219,7 +182,7 @@
         /**/
         display: inline;
         font: 2.3em'Gaegu', cursive;
-        margin: 0px 40px 0px 36px;
+        margin: 0 40px 0 36px;
     }
 
     .moves-number {
@@ -278,7 +241,7 @@
 
     .play-time {
         font: 1.5em'Gaegu', cursive;
-        margin: 48px 0px 0px 0px;
+        margin: 48px 0 0 0;
     }
 
     .moves-counter-used {
@@ -287,7 +250,7 @@
     }
 
     .star-rating-end {
-        margin: 24px 40px 0px 0px;
+        margin: 24px 40px 0 0;
         font-size: 64px;
 
     }
@@ -300,7 +263,7 @@
 @media screen and (min-width: 701px) and (max-width: 824px) {
     .game-title {
         font: 4em'Gaegu', cursive;
-        margin: 24px 0px 24px 0px;
+        margin: 24px 0 24px 0;
 
     }
         /*Deck size and cards*/
@@ -308,7 +271,7 @@
         /**/
         display: flex;
         flex-flow: column wrap;
-        background: radial-gradient(#f23 0%, #f99 100%);
+        background: radial-gradient(#f23 0, #f99 100%);
         width: 600px;
         height: 600px;
         border-radius: 2%;
@@ -325,43 +288,27 @@
         margin: 2%;
         display: flex;
         flex:100px;
-        box-shadow: 0px 0px 10px 0 rgba(0, 0, 0, 1);
+        box-shadow: 0 0 10 0 rgba(0, 0, 0, 1);
         justify-content: center;
         align-items: center;
     }
 
     .timer {
         font: 2.7em'Gaegu', cursive;
-        margin: -12px 0px 0px 0px;
+        margin: -12px 0 0 0;
     }
 
-    /* fallback */
-    @font-face {
-        font-family: 'Material Icons';
-        font-style: normal;
-        font-weight: 400;
-        src: url(https://fonts.gstatic.com/s/materialicons/v37/flUhRq6tzZclQEJ-Vdg-IuiaDsNc.woff2) format('woff2');
-    }
 
-    .material-icons {
-        font-family: 'Material Icons';
-        font-weight: normal;
-        font-style: normal;
-        font-size: 48px;
-        line-height: 1;
-        letter-spacing: normal;
-        text-transform: none;
-        display: inline-block;
-        white-space: nowrap;
-        word-wrap: normal;
-        direction: ltr;
-        -webkit-font-feature-settings: 'liga';
-        -webkit-font-smoothing: antialiased;
-}
+        /*Icons*/
+        .material-icons.md-48 {
+            font-size: 48px;
+        }
+
+
     .star-rating {
         /**/
         display: inline;
-        margin: 0px 60px 0px -40px;
+        margin: 0 60px 0 -40px;
     }
 
     .star {
@@ -373,7 +320,7 @@
         /**/
         display: inline;
         font: 3em'Gaegu', cursive;
-        margin: 0px 77px 0px 77px;
+        margin: 0 77px 0 77px;
     }
 
     .moves-number {
@@ -432,7 +379,7 @@
 
     .play-time {
         font: 3em'Gaegu', cursive;
-        margin: 48px 0px 0px 0px;
+        margin: 48px 0 0 0;
     }
 
     .moves-counter-used {
@@ -441,7 +388,7 @@
     }
 
     .star-rating-end {
-        margin: 24px 40px 0px 0px;
+        margin: 24px 40px 0 0;
 
 
     }
@@ -452,7 +399,7 @@
 @media screen and (min-width: 825px) and (max-width: 1439px) {
     .game-title {
         font: 4em'Gaegu', cursive;
-        margin: 36px 0px 36px 0px;
+        margin: 36px 0 36px 0;
 
     }
 
@@ -461,7 +408,7 @@
         /**/
         display: flex;
         flex-flow: column wrap;
-        background: radial-gradient(#f23 0%, #f99 100%);
+        background: radial-gradient(#f23 0, #f99 100%);
         width: 700px;
         height: 500px;
         border-radius: 2%;
@@ -478,39 +425,21 @@
         margin: 1.6%;
         display: flex;
         flex:100px;
-        box-shadow: 0px 0px 10px 0 rgba(0, 0, 0, 1);
+        box-shadow: 0 0 10px 0 rgba(0, 0, 0, 1);
         justify-content: center;
         align-items: center;
     }
 
     .timer {
         font: 3em'Gaegu', cursive;
-        margin: -48px 0px 0px 0px;
+        margin: -48px 0 0 0;
     }
 
-    /* fallback */
-    @font-face {
-        font-family: 'Material Icons';
-        font-style: normal;
-        font-weight: 400;
-        src: url(https://fonts.gstatic.com/s/materialicons/v37/flUhRq6tzZclQEJ-Vdg-IuiaDsNc.woff2) format('woff2');
-    }
-
-    .material-icons {
-        font-family: 'Material Icons';
-        font-weight: normal;
-        font-style: normal;
+    /*Icons*/
+    .material-icons.md-60 {
         font-size: 60px;
-        line-height: 1;
-        letter-spacing: normal;
-        text-transform: none;
-        display: inline-block;
-        white-space: nowrap;
-        word-wrap: normal;
-        direction: ltr;
-        -webkit-font-feature-settings: 'liga';
-        -webkit-font-smoothing: antialiased;
-}
+    }
+
     .star-rating {
         /**/
         display: inline;
@@ -525,7 +454,7 @@
         /**/
         display: inline;
         font: 3.8em'Gaegu', cursive;
-        margin: 0px 100px 0px 100px;
+        margin: 0 100px 0 100px;
     }
 
     .moves-number {
@@ -584,7 +513,7 @@
 
     .play-time {
         font: 3em'Gaegu', cursive;
-        margin: 48px 0px 0px 0px;
+        margin: 48px 0 0 0;
     }
 
     .moves-counter-used {
@@ -593,7 +522,7 @@
     }
 
     .star-rating-end {
-        margin: 24px 40px 0px 0px;
+        margin: 24px 40px 0 0;
 
 
     }
@@ -605,7 +534,7 @@
 @media screen and (min-width: 1440px) and (max-width: 1679px) {
     .game-title {
         font: 5em'Gaegu', cursive;
-        margin: 36px 0px 36px 0px;
+        margin: 36px 0 36px 0;
 
     }
 
@@ -614,7 +543,7 @@
         /**/
         display: flex;
         flex-flow: column wrap;
-        background: radial-gradient(#f23 0%, #f99 100%);
+        background: radial-gradient(#f23 0, #f99 100%);
         width: 1200px;
         height: 520px;
         border-radius: 2%;
@@ -631,39 +560,21 @@
         margin: 1.2%;
         display: flex;
         flex:80px;
-        box-shadow: 0px 0px 10px 0 rgba(0, 0, 0, 1);
+        box-shadow: 0 0 10px 0 rgba(0, 0, 0, 1);
         justify-content: center;
         align-items: center;
     }
 
     .timer {
         font: 4em'Gaegu', cursive;
-        margin: -48px 0px 0px 0px;
+        margin: -48px 0 0 0;
     }
 
-    /* fallback */
-    @font-face {
-        font-family: 'Material Icons';
-        font-style: normal;
-        font-weight: 400;
-        src: url(https://fonts.gstatic.com/s/materialicons/v37/flUhRq6tzZclQEJ-Vdg-IuiaDsNc.woff2) format('woff2');
-    }
-
-    .material-icons {
-        font-family: 'Material Icons';
-        font-weight: normal;
-        font-style: normal;
+    /*Icons*/
+    .material-icons.md-72 {
         font-size: 72px;
-        line-height: 1;
-        letter-spacing: normal;
-        text-transform: none;
-        display: inline-block;
-        white-space: nowrap;
-        word-wrap: normal;
-        direction: ltr;
-        -webkit-font-feature-settings: 'liga';
-        -webkit-font-smoothing: antialiased;
-}
+    }
+
     .star-rating {
         /**/
         display: inline;
@@ -678,7 +589,7 @@
         /**/
         display: inline;
         font: 4em'Gaegu', cursive;
-        margin: 0px 320px 0px 320px;
+        margin: 0 320px 0 320px;
     }
 
     .moves-number {
@@ -737,7 +648,7 @@
 
     .play-time {
         font: 3em'Gaegu', cursive;
-        margin: 48px 0px 0px 0px;
+        margin: 48px 0 0 0;
     }
 
     .moves-counter-used {
@@ -746,7 +657,7 @@
     }
 
     .star-rating-end {
-        margin: 24px 40px 0px 0px;
+        margin: 24px 40px 0 0;
 
 
     }
@@ -757,7 +668,7 @@
 @media screen and (min-width: 1680px) {
     .game-title {
         font: 5em'Gaegu', cursive;
-        margin: 36px 0px 36px 0px;
+        margin: 36px 0 36px 0;
 
     }
 
@@ -766,7 +677,7 @@
         /**/
         display: flex;
         flex-flow: column wrap;
-        background: radial-gradient(#f23 0%, #f99 100%);
+        background: radial-gradient(#f23 0, #f99 100%);
         width: 1200px;
         height: 520px;
         border-radius: 2%;
@@ -783,39 +694,22 @@
         margin: 1.2%;
         display: flex;
         flex:100px;
-        box-shadow: 0px 0px 10px 0 rgba(0, 0, 0, 1);
+        box-shadow: 0 0 10px 0 rgba(0, 0, 0, 1);
         justify-content: center;
         align-items: center;
     }
 
     .timer {
         font: 4em'Gaegu', cursive;
-        margin: -48px 0px 0px 0px;
+        margin: -48px 0 0 0;
     }
 
-    /* fallback */
-    @font-face {
-        font-family: 'Material Icons';
-        font-style: normal;
-        font-weight: 400;
-        src: url(https://fonts.gstatic.com/s/materialicons/v37/flUhRq6tzZclQEJ-Vdg-IuiaDsNc.woff2) format('woff2');
-    }
-
-    .material-icons {
-        font-family: 'Material Icons';
-        font-weight: normal;
-        font-style: normal;
+    /*Icons*/
+    .material-icons.md-72 {
         font-size: 72px;
-        line-height: 1;
-        letter-spacing: normal;
-        text-transform: none;
-        display: inline-block;
-        white-space: nowrap;
-        word-wrap: normal;
-        direction: ltr;
-        -webkit-font-feature-settings: 'liga';
-        -webkit-font-smoothing: antialiased;
-}
+    }
+
+
     .star-rating {
         /**/
         display: inline;
@@ -830,7 +724,7 @@
         /**/
         display: inline;
         font: 4em'Gaegu', cursive;
-        margin: 0px 320px 0px 320px;
+        margin: 0 320px 0 320px;
     }
 
     .moves-number {
@@ -889,7 +783,7 @@
 
     .play-time {
         font: 3em'Gaegu', cursive;
-        margin: 48px 0px 0px 0px;
+        margin: 48px 0 0 0;
     }
 
     .moves-counter-used {
@@ -898,7 +792,7 @@
     }
 
     .star-rating-end {
-        margin: 24px 40px 0px 0px;
+        margin: 24px 40px 0 0;
 
 
     }

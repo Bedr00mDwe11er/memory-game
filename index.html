@@ -5,141 +5,134 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>Memory Game</title>
-    <link rel="stylesheet" href="css/memory.css">
-    <link rel="stylesheet" href="css/responsive.css">
+    <link href="css/memory.css" rel="stylesheet">
+    <link href="css/responsive.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Gaegu" rel="stylesheet">
 </head>
-<body>
 
+<body>
     <div class="container">
         <header>
             <h1 class="game-title">Matching Game</h1>
         </header>
-
         <main class="content">
             <section class="score">
                 <ul class="star-rating">
                     <li class="star">
-                        <i class="material-icons star-left">
+                        <i class="material-icons md-36 md-48 md-60 md-72 star-left">
                             star
                         </i>
                     </li>
                     <li class="star">
-                        <i class="material-icons star-mid">
+                        <i class="material-icons md-36 md-48 md-60 md-72 star-mid">
                             star
                         </i>
                     </li>
                     <li class="star">
-                        <i class="material-icons star-right">
+                        <i class="material-icons md-36 md-48 md-60 md-72 star-right">
                             star
                         </i>
                     </li>
                 </ul>
-
                 <p class="moves-counter">
                     <span class="moves-number">0</span> <span class="moves-word">Moves</span>
                 </p>
-
                 <div class="restart-button">
-                    <i class="material-icons">
+                    <i class="material-icons md-36 md-48 md-60 md-72">
                         refresh
                     </i>
                 </div>
-
-                <!--TODO: add a displayed timer-->
             </section>
-
             <section class="game-board">
                 <ul class="deck">
                     <li class="card">
-                        <i class="material-icons">
+                        <i class="material-icons md-36 md-48 md-60 md-72">
                             fingerprint
                         </i>
                     </li>
                     <li class="card">
-                        <i class="material-icons">
+                        <i class="material-icons md-36 md-48 md-60 md-72">
                             fingerprint
                         </i>
                     </li>
                     <li class="card">
-                        <i class="material-icons">
+                        <i class="material-icons md-36 md-48 md-60 md-72">
                             face
                         </i>
                     </li>
                     <li class="card">
-                        <i class="material-icons">
+                        <i class="material-icons md-36 md-48 md-60 md-72">
                             face
                         </i>
                     </li>
                     <li class="card">
-                        <i class="material-icons">
+                        <i class="material-icons md-36 md-48 md-60 md-72">
                             motorcycle
                         </i>
                     </li>
                     <li class="card">
-                        <i class="material-icons">
+                        <i class="material-icons md-36 md-48 md-60 md-72">
                             motorcycle
                         </i>
                     </li>
                     <li class="card">
-                        <i class="material-icons">
+                        <i class="material-icons md-36 md-48 md-60 md-72">
                             audiotrack
                         </i>
                     </li>
                     <li class="card">
-                        <i class="material-icons">
+                        <i class="material-icons md-36 md-48 md-60 md-72">
                             audiotrack
                         </i>
                     </li>
                     <li class="card">
-                        <i class="material-icons">
+                        <i class="material-icons md-36 md-48 md-60 md-72">
                             cloud
                         </i>
                     </li>
                     <li class="card">
-                        <i class="material-icons">
+                        <i class="material-icons md-36 md-48 md-60 md-72">
                             cloud
                         </i>
                     </li>
                     <li class="card">
-                        <i class="material-icons">
+                        <i class="material-icons md-36 md-48 md-60 md-72">
                             flare
                         </i>
                     </li>
                     <li class="card">
-                        <i class="material-icons">
+                        <i class="material-icons md-36 md-48 md-60 md-72">
                             flare
                         </i>
                     </li>
                     <li class="card">
-                        <i class="material-icons">
+                        <i class="material-icons md-36 md-48 md-60 md-72">
                             palette
                         </i>
                     </li>
                     <li class="card">
-                        <i class="material-icons">
+                        <i class="material-icons md-36 md-48 md-60 md-72">
                             palette
                         </i>
                     </li>
                     <li class="card">
-                        <i class="material-icons">
+                        <i class="material-icons md-36 md-48 md-60 md-72">
                             cake
                         </i>
                     </li>
                     <li class="card">
-                        <i class="material-icons">
+                        <i class="material-icons md-36 md-48 md-60 md-72">
                             cake
                         </i>
                     </li>
                 </ul>
             </section>
-
             <section class="timer">
                 <span class="hours">0</span> Hours:
                 <span class="minutes">0</span> Minutes:
                 <span class="seconds">0</span> Seconds
             </section>
-
             <!--adding congraulations pop to the html-->
             <div class="congraulations-modal">
                 <!--modal content-->
@@ -148,51 +141,41 @@
                     <h1 class="congragulations-heading">You Win!</h1>
                     <!--Play again "button"-->
                     <span class="play-again-button">Play again!</span>
-
                     <!--stat for the player-->
-
                     <!--show play time-->
                     <section class="play-time">
-                      </span><span class="hours-spent">0</span> Hours,
+                        <span class="hours-spent">0</span> Hours,
                         <span class="minutes-spent">0</span> Minutes,
                         <span class="seconds-spent">0</span> Seconds
                     </section>
-
                     <!--show number of moves it took-->
                     <p class="moves-counter-used">
-                    <span class="moves-number-used">0</span> <span class="moves-word">Moves</span></p>
-
+                        <span class="moves-number-used">0</span>
+                        <span class="moves-word">Moves</span>
+                    </p>
                     <!--show star rating-->
-                     <ul class="star-rating-end">
-                    <li class="star">
-                        <i class="material-icons star-left-end">
+                    <ul class="star-rating-end">
+                        <li class="star">
+                            <i class="material-icons md-36 md-48 md-60 md-72 star-left-end">
                             star
                         </i>
-                    </li>
-                    <li class="star">
-                        <i class="material-icons star-mid-end">
+                        </li>
+                        <li class="star">
+                            <i class="material-icons md-36 md-48 md-60 md-72 star-mid-end">
                             star
                         </i>
-                    </li>
-                    <li class="star">
-                        <i class="material-icons star-right-end">
+                        </li>
+                        <li class="star">
+                            <i class="material-icons md-36 md-48 md-60 md-72 star-right-end">
                             star
                         </i>
-                    </li>
-                </ul>
-
-
-
-                    <!--Extra stats for player -->
-
-                    <!--show number of wrong moves made--->
-
+                        </li>
+                    </ul>
                 </div>
             </div>
         </main>
-
     </div>
-
     <script src="js/game.js"></script>
 </body>
+
 </html>
