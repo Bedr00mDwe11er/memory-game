@@ -369,22 +369,6 @@
             mid_star.textContent = 'star_border';
         }
 
-        //If the player makes 2 more wrong moves lose another half star
-        if (number_wrong == 23) {
-            console.log('lose another half star');
-
-            //change the icon for the left most star to a half star
-            left_star.textContent = 'star_half';
-        }
-
-        //If the player makes one more wrong move lose another half star
-        if (number_wrong == 24) {
-            console.log('lose another half star');
-
-            //change the icon to the left  most star to a empty star
-            left_star.textContent = 'star_border';
-        }
-
         /*the cards do not match,
         set the cards color to red,
         then use a delay to keep the cards face up for a little bit
@@ -556,7 +540,7 @@
         }
 
         //If the player makes 3 more wrong moves lose another half a star
-        if (number_wrong >= 21 && number_wrong < 23) {
+        if (number_wrong >= 21) {
             console.log('lose another half a star');
 
             //change the icon for the right most star to an empty star
@@ -565,37 +549,6 @@
             //change the icon for the mid star to an empty star
             mid_star_end.textContent = 'star_border';
         }
-
-        //If the player makes 2 more wrong moves lose another half star
-        if (number_wrong >= 23 && number_wrong < 24) {
-            console.log('lose another half star');
-
-            //change the icon for the right most star to an empty star
-            right_star_end.textContent = 'star_border';
-
-            //change the icon for the mid star to an empty star
-            mid_star_end.textContent = 'star_border';
-
-            //change the icon for the left most star to a half star
-            left_star_end.textContent = 'star_half';
-        }
-
-        //If the player makes one more wrong move lose another half star
-        if (number_wrong >= 24) {
-            console.log('lose another half star');
-
-            //change the icon for the right most star to an empty star
-            right_star_end.textContent = 'star_border';
-
-            //change the icon for the mid star to an empty star
-            mid_star_end.textContent = 'star_border';
-
-            //change the icon to the left  most star to a empty star
-            left_star_end.textContent = 'star_border';
-        }
-
-
-
 
         //change the display so it shows up on the page when the user has won
         congragulations_popUp.style.display = 'block';
