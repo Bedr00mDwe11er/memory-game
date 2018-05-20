@@ -93,7 +93,7 @@ li {
 .deck {
     display: flex;
     flex-flow: column wrap;
-    background: radial-gradient(#f23 0%, #f99 100%);
+    background: radial-gradient(#f23 0, #f99 100%);
     width: 250px;
     height: 250px;
     border-radius: 2%;
@@ -174,20 +174,13 @@ li {
 .congraulations-modal {
     /*hide it by default*/
     display: none;
-
     position: fixed;
-
     /*sits on top*/
     z-index: 1;
-
     left: 0;
-
     top: 0;
-
     width: 100%;
-
     height: 100%;
-
     background: white;
 }
 
