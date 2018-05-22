@@ -41,7 +41,7 @@
     let hours_element = document.querySelector('.hours');
 
     //timer
-    let timerId = window.setInterval(timer, 1000);
+    let timerId;
 
     //move counter
     let move_counter = 0;
@@ -177,6 +177,11 @@
                 if (e.target.className == 'card faceUp') {
                     first_card = e.target.firstElementChild.innerText;
                     console.log(`the first card is a ${first_card}`);
+                }
+
+                //start time after card of the game is clicked
+                if(move_counter == 0) {
+                    timerId = window.setInterval(timer, 1000);
                 }
 
             }
@@ -320,7 +325,7 @@
             console.log(`you win`);
 
             //stop the timer
-            window.clearInterval(timerId);
+            //window.clearInterval(timerId);
 
             //call game_won function
             setTimeout(game_won, 1000);
@@ -726,7 +731,7 @@
             hours_element.textContent = hours;
 
             //restart the timer
-            timerId = window.setInterval(timer, 1000);
+            //timerId = window.setInterval(timer, 1000);
 
 
         }
