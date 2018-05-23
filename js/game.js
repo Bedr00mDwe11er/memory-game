@@ -5,6 +5,73 @@
 
     });
 
+//Creating the cards with javaScript dynamically
+
+/*
+create a document fragment to attach the cards to.
+when all of the cards have been atteached to the fragment
+attach the fragment to the ul with class of deck.
+*/
+
+//this where fragment will get appended to.
+let el_deck = document.querySelector('.deck');
+
+//making fragment
+let fragment = document.createDocumentFragment();
+
+//make an array that will hold the text content for the cards
+let icons_text = ['fingerprint', 'fingerprint', 'face', 'face', 'motorcycle', 'motorcycle',
+                  'audiotrack', 'audiotrack', 'cloud', 'cloud', 'flare', 'flare', 'palette',
+                   'palette', 'cake', 'cake'];
+
+for(m = 0; m < 16; m++){
+/*1: create a li element and give it a class of "card".
+2: create a "i" element give it a class of,
+"material-icons md-36 md-48 md-60 md-72"
+3: set the current "i" elements textContent to,
+icons_text[m]
+4: append the i element to the li element
+5: append the fully make li or card to the fragment
+*/
+
+//1:
+
+//makeing a li
+let el_li = document.createElement('li');
+
+//giving the li a class of "card"
+el_li.className = 'card'
+
+//2:
+
+//making i element
+let el_i = document.createElement('i');
+
+//adding the classes to i
+el_i.className = 'material-icons md-36 md-48 md-60 md-72';
+
+//3:
+
+//setting the current "i" elements textContent to, icons_text[m]
+el_i.textContent = `${icons_text[m]}`
+
+
+//4:
+
+//appending el_i to the end of el_li
+el_li.appendChild(el_i);
+
+//5:
+
+//append the the el_li to the end of the fragment
+fragment.appendChild(el_li);
+
+}
+
+//append the fragment to the deck
+el_deck.appendChild(fragment);
+
+
     /*star rating*/
     //star elements
     //select the right most star icon
